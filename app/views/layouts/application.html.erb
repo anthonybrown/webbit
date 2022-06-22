@@ -16,6 +16,13 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+    <% if user_signed_in? %>
+      <%= button_to "Log out", destroy_user_session_path, method:
+         :delete, data: { turbo: false }, class: "btn btn-secondary" %>
+    <% else %>
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-secondary" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
