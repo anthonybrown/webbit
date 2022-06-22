@@ -19,9 +19,9 @@
 
     <% if user_signed_in? %>
       <%= button_to "Log out", destroy_user_session_path, method:
-         :delete, data: { turbo: false }, class: "btn btn-secondary" %>
+         :delete, data: { turbo: false }, class: "btn btn-outline" %>
     <% else %>
-      <%= link_to "Log in", new_user_session_path, class: "btn btn-secondary" %>
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-outline" %>
     <% end %>
     <%= yield %>
   </body>
