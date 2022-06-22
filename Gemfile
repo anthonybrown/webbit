@@ -75,5 +75,5 @@ group :test do
 end
 
 gem "devise", "~> 4.8"
-
+gem 'image_processing', '>= 1.1.2'
 gem "tailwindcss-rails", "~> 2.0"

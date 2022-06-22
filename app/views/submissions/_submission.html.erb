@@ -1,0 +1,32 @@
+<div id="<%= dom_id submission %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= submission.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Body:</strong>
+    <%= submission.body %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Url:</strong>
+    <%= submission.url %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Media:</strong>
+    <%= link_to submission.media.filename, submission.media if submission.media.attached? %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">User:</strong>
+    <%= submission.user_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this submission", submission, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this submission', edit_submission_path(submission), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
