@@ -1,0 +1,23 @@
+.btn {
+  @apply font-semibold text-sm py-3 px-6 rounded cursor-pointer no-underline;
+}
+
+.btn-small {
+  @apply font-bold py-2 px-4 rounded text-sm;
+}
+
+.btn-indigo {
+  @apply bg-indigo-600 text-white hover:bg-indigo-700;
+}
+
+.btn-green {
+  @apply bg-emerald-600 text-white hover:bg-emerald-700;
+}
+
+.btn-outline {
+  @apply text-gray-800 border border-gray-400 hover:bg-gray-100;
+}
+
+.btn-white {
+  @apply bg-white text-gray-800 py-2 px-4 border border-gray-400 rounded shadow-sm hover:bg-gray-50;
+}
